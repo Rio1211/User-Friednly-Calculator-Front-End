@@ -76,7 +76,7 @@ buttonsContainer.addEventListener("click", (e) => {
                 expression.textContent = expression.textContent.slice(0, -2);
             } 
 
-            expression.textContent += " ×*";
+            expression.textContent += " ×";
             break;
         case "divide":
             if (isNegativeSign()) {
