@@ -53,10 +53,9 @@
     border-radius: 16px 16px 0 0;
 }
 
-* {
-    box-sizing: border-box;
-    font-family: "Courgette", cursive;
-}
+* { box-sizing: 
+    border-box; 
+    font-family: "Courgette", system-ui, -apple-system, "Segoe UI", sans-serif; }
 
 html {
     height: 100%;
@@ -84,7 +83,7 @@ body {
     width: 5vh;
     aspect-ratio: 1;
     background-color: transparent;
-    background-image: url("./img/theme-icon.png");
+    background-image: url("./img/dark-mode.png");
     background-size: contain;
     cursor: pointer;
 }
@@ -248,3 +247,13 @@ body {
 #attribution {
     font-size: 1em;
 }
+
+#attribution {
+  display: flex;
+  flex-direction: column;   /* 一列一条 */
+  align-items: center;      /* 居中 */
+  gap: 4px;                 /* 每行间距 */
+  text-align: center;
+}
+
+#attribution .attr-item { display: block; }

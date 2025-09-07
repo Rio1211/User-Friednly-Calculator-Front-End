@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Calculator (API-backed)</title>
+  <title>Calculator</title>
   <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="./img/calculator-svgrepo-com.svg" type="image/svg+xml"/>
 </head>
+
 <body>
   <button id="change-theme-button" aria-label="Toggle theme"></button>
 
   <main id="main-container">
-    <section id="output-container" class="glass">
+    <div id="output-container" class="glass">
       <div id="history"></div>
       <div id="calculation">0</div>
-    </section>
+    </div>
 
-    <section id="buttons-container" class="glass" aria-label="Calculator keypad">
+    <div id="buttons-container" class="glass">
       <div class="button-row">
-        <button id="clear" class="button">C</button>
-        <button id="del" class="button" aria-label="Backspace">⌫</button>
+        <button id="clear" class="button">AC</button>
+        <button id="del"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/> </svg></button>
         <button id="percent" class="button">%</button>
         <button id="divide" class="button button--op">÷</button>
       </div>
@@ -46,15 +48,19 @@
         <button id="decimal" class="button">.</button>
         <button id="equal" class="button button--op button--equal">=</button>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer id="copyright">
-    <div>Calculator</div>
-    <div id="attribution">© 2025 - Designed and developed by Rio He</div>
+    <div>© 2025 - Designed and developed by Rio He</div>
+    <div id="attribution" class="attribution">
+      <small class="meizu">UI design inspired by the Meizu built-in calculator.</small>
+      <small>
+        <a href="https://www.flaticon.com/free-icons/dark-mode" title="Dark mode icons">Dark mode icons created by surang - Flaticon</a>
+      </small>
+    </div>
   </footer>
 
   <script src="./script.js" defer></script>
 </body>
 </html>
-
