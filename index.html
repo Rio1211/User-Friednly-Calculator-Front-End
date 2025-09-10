@@ -1,76 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Calculator</title>
-  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="icon" href="./img/calculator-svgrepo-com.svg" type="image/svg+xml"/>
-</head>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./img/calculator-svgrepo-com.svg" type="image/svg+xml"/>
+  </head>
 
-<body>
-  <button id="change-theme-button" aria-label="Toggle theme"></button>
+  <body>
+    <button id="change-theme-button" aria-label="Toggle theme"></button>
 
-  <main id="main-container">
-    <div id="output-container" class="glass">
-      <div id="history"></div>
-      <div id="calculation">0</div>
-    </div>
-
-    <div id="buttons-container" class="glass">
-      <div class="button-row">
-        <button id="clear" class="button">AC</button>
-        <button id="del"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/> </svg></button>
-        <button id="percent" class="button">%</button>
-        <button id="divide" class="button button--op">÷</button>
+    <main id="main-container">
+      <div id="output-container" class="glass">
+        <div id="history"></div>
+        <div id="calculation">0</div>
       </div>
-      <div class="button-row">
-        <button id="7" class="button">7</button>
-        <button id="8" class="button">8</button>
-        <button id="9" class="button">9</button>
-        <button id="multiply" class="button button--op">×</button>
-      </div>
-      <div class="button-row">
-        <button id="4" class="button">4</button>
-        <button id="5" class="button">5</button>
-        <button id="6" class="button">6</button>
-        <button id="minus" class="button button--op">-</button>
-      </div>
-      <div class="button-row">
-        <button id="1" class="button">1</button>
-        <button id="2" class="button">2</button>
-        <button id="3" class="button">3</button>
-        <button id="plus" class="button button--op">+</button>
-      </div>
-      <div class="button-row">
-        <button id="0" class="button">0</button>
-        <button id="decimal" class="button">.</button>
-        <button id="equal" class="button button--op button--equal">=</button>
-      </div>
-    </div>
-  </main>
 
-  <footer id="copyright">
-    <div>© 2025 - Designed and developed by Rio He</div>
-    <div id="attribution" class="attribution">
-      <small class="meizu">UI design inspired by the Meizu built-in calculator.</small>
-      <small>
-        <a href="https://www.flaticon.com/free-icons/dark-mode" title="Dark mode icons">Dark mode icons created by surang - Flaticon</a>
-      </small>
-    </div>
-  </footer>
+      <div id="buttons-container" class="glass">
+        <div class="button-row">
+          <button id="clear" class="button">AC</button>
+          <button id="del"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/> </svg></button>
+          <button id="percent" class="button">%</button>
+          <button id="divide" class="button button--op">÷</button>
+        </div>
+        <div class="button-row">
+          <button id="7" class="button">7</button>
+          <button id="8" class="button">8</button>
+          <button id="9" class="button">9</button>
+          <button id="multiply" class="button button--op">×</button>
+        </div>
+        <div class="button-row">
+          <button id="4" class="button">4</button>
+          <button id="5" class="button">5</button>
+          <button id="6" class="button">6</button>
+          <button id="minus" class="button button--op">-</button>
+        </div>
+        <div class="button-row">
+          <button id="1" class="button">1</button>
+          <button id="2" class="button">2</button>
+          <button id="3" class="button">3</button>
+          <button id="plus" class="button button--op">+</button>
+        </div>
+        <div class="button-row">
+          <button id="0" class="button">0</button>
+          <button id="decimal" class="button">.</button>
+          <button id="pi" class="button">π</button>
+          <button id="equal" class="button button--op button--equal">=</button>
+        </div>
+      </div>
+    </main>
 
-  <script src="./script.js" defer></script>
-  
-  <script>
-document.addEventListener('contextmenu', e => e.preventDefault());
+    <footer id="copyright">
+      <div>© 2025 - Designed and developed by Rio He</div>
+      <div id="attribution" class="attribution">
+        <small class="meizu">UI design inspired by the Meizu built-in calculator.</small>
+        <small>
+          <a href="https://www.flaticon.com/free-icons/dark-mode" title="Dark mode icons">Dark mode icons created by surang - Flaticon</a>
+        </small>
+      </div>
+    </footer>
 
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.shiftKey && e.key === 'J') || (e.ctrlKey && e.key === 'U')) {
-        e.preventDefault();
-    }
-});
-</script>
-</body>
-</html>
+    <script src="./script.js" defer></script>
+    
+    <script>
+      document.addEventListener('contextmenu', e => e.preventDefault());
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.shiftKey && e.key === 'J') || (e.ctrlKey && e.key === 'U')) {
+            e.preventDefault();
+        }
+    });
+  </script>
+  </body>
+  </html>
